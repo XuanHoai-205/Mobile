@@ -21,19 +21,16 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyApplicationTheme {
-                AvatarUI()
-                // InputBox()
+                // AvatarUI()
+                //InputBox()
                 // CheckInfoScreen()
-                //CheckEmailBox()
+                // CheckEmailBox()
+                UIC()
             }
         }
     }
 }
 
 
-@Composable
-@Preview
-fun CheckBox() {
-    AvatarUI()
-}
+
 

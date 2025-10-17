@@ -1,7 +1,8 @@
 package com.example.myapplication
 
-
+import android.content.Context
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -18,36 +19,47 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
+
+
 @Composable
-fun AvatarUI() {
+fun EventComponents(){
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFF20B2AA)),
         contentAlignment = Alignment.Center
-    ) {
+    ){
         Column(
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.avatar), // ảnh tên "avatar" trong res/drawable
-                contentDescription = "Ảnh đại diện",
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ){
+            Text(
+                text= "My First App"
+            )
+            Spacer(modifier = Modifier.height(30.dp))
+            Text(
+                text="Nguyễn Xuân Hoài"
+
+
+            )
+            Spacer(modifier = Modifier.height(30.dp))
+
+            Button(
                 modifier = Modifier
-                    .size(200.dp)
-                    .padding(16.dp)
-            )
+                    .size(width = 100.dp, height = 50.dp),
 
-            Text(
-                text = "Nguyễn Xuân Hoài",
-                fontSize = 20.sp,
-                color = Color.Black
-            )
-
-            Text(
-                text = "042205004148",
-                fontSize = 16.sp,
-                color = Color.DarkGray
-            )
+                onClick={
+                }
+            ){
+                Text(
+                    text="Say Hi!"
+                )
+            }
         }
     }
+}
+@Composable
+@Preview
+fun CheckBox() {
+    EventComponents()
 }
